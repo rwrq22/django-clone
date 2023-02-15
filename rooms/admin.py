@@ -9,6 +9,7 @@ class RoomAdmin(admin.ModelAdmin):
         "name",
         "kind",
         "total_amenities",
+        "rating",
         "price",
         "owner",
         "created_at",
@@ -23,9 +24,7 @@ class RoomAdmin(admin.ModelAdmin):
         "created_at",
     )
 
-    def total_amenities(self, room):
-        print(room)
-        return room.amenities.count()
+    search_fields = ("owner__username",)
 
 
 @admin.register(Amenity)
