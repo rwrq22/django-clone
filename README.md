@@ -1,2 +1,2 @@
 # django-clone
- 풀스택 연습용
+ Django, React 연습용
