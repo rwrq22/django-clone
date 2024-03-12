@@ -2,7 +2,17 @@ from rest_framework import serializers
 from .models import Category
 
 
-class CategorySerializer(serializers.Serializer):
+class CategorySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Category
+        fields = (
+            "name",
+            "kind",
+        )
+
+
+# Own Serializer Model
+""" class CategorySerializer(serializers.Serializer):
     pk = serializers.IntegerField(read_only=True)
     name = serializers.CharField(
         required=True,
@@ -22,4 +32,4 @@ class CategorySerializer(serializers.Serializer):
         )  # dictionary's 'get' returns default value if there is no data of "name"
         instance.kind = validated_data.get("kind", instance.kind)
         instance.save()
-        return instance
+        return instance """

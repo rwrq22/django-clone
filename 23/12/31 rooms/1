@@ -1,0 +1,22 @@
+{
+  "name": "House created with DRF",
+  "country": "S.Korea",
+  "city": "Seoul",
+  "price": 1000,
+  "rooms": 5,
+  "toilets": 3,
+  "description": "DRF is great!",
+  "address": "서울특별시 마포구 상수동",
+  "pet_friendly": false,
+  "kind": "private_room",
+  "category": {
+    "name": "sdsdsd",
+    "kind": "rooms"
+  },
+  "amenities": [
+    {
+      "name": "lalal",
+      "description": "dlalall"
+    }
+  ]
+}
